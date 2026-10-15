@@ -26,6 +26,7 @@ test.describe('OrangeHRM login flows', () => {
   test('valid user can log in successfully via API', async ({ page }) => {
     const loginPage = new LoginPage(page);
     await loginPage.goto();
+//new changes
 
     const csrfTokenInput = page.locator('input[name="_token"]');
     await expect(csrfTokenInput).toHaveAttribute('value', /.+/);
